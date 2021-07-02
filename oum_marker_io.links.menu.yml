@@ -1,0 +1,6 @@
+oum_marker_io.settings_form:
+  title: OUM Marker.io
+  description: Configure OUM Marker.io.
+  parent: system.admin_config_system
+  route_name: oum_marker_io.settings_form
+  weight: 10
