@@ -14,7 +14,9 @@
  */
 function oum_marker_io_page_attachments(&$attachments) {
   $destination = \Drupal::config('oum_marker_io.settings')->get('destination');
-  if (\Drupal::currentUser()->isAuthenticated() && isset($destination)) {
+  if (\Drupal::currentUser()->isAuthenticated()
+      && \Drupal::currentUser()->hasPermission('access marker io')
+      && isset($destination)) {
     $attachments['#attached']['library'][] = 'oum_marker_io/oum_marker_io';
     $attachments['#attached']['drupalSettings']['oum_marker_io']['destination'] = $destination;
   }
