@@ -1,7 +1,7 @@
 {
   "name": "drupal/markerio",
+  "description": "Collect visual website feedback from visitors and users directly in your website using Marker.io",
   "type": "drupal-module",
-  "description": "Collect visual website feedback from colleagues and clients directly in your website using Marker.io",
   "keywords": ["Drupal"],
   "license": "GPL-2.0-or-later",
   "homepage": "https://www.drupal.org/project/markerio",

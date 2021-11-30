@@ -15,16 +15,16 @@
 function markerio_page_attachments(&$attachments) {
   $destination = \Drupal::config('markerio.settings')->get('destination');
 
-  $account = \Drupal::currentUser();
+  $user = \Drupal::currentUser();
 
-  if ($account->hasPermission('access marker io') && isset($destination)) {
+  if ($user->hasPermission('access markerio') && isset($destination)) {
     // get username and e-mailaddress
-    $user_email = '';
-    $user_name = '';
+    $user_email = false;
+    $user_name = false;
 
-    if ($account->isAuthenticated()) {
-      $user_email = $account->getEmail();
-      $user_name = $account->getDisplayName();
+    if ($user->isAuthenticated()) {
+      $user_email = $user->getEmail();
+      $user_name = $user->getDisplayName();
     }
     
     // prepare javasript
@@ -33,5 +33,4 @@ function markerio_page_attachments(&$attachments) {
     $attachments['#attached']['drupalSettings']['markerio']['user_email'] = $user_email;
     $attachments['#attached']['drupalSettings']['markerio']['user_name'] = $user_name;
   }
-
 }

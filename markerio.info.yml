@@ -1,5 +1,7 @@
 name: Marker.io
-description: Collect visual website feedback from colleagues and clients directly in your website using Marker.io
+description: Collect visual website feedback from visitors and users directly in your website using Marker.io
 type: module
-package: OUM
+package: User interface
+configure: markerio.settings
+core: 8.x
 core_version_requirement: ^8 || ^9

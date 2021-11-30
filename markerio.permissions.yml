@@ -1,3 +1,6 @@
-access marker io:
-  title: 'Access Marker.io'
-  description: 'Allows users to report problems via the Marker.io tool.'
+administer markerio configuration:
+  title: 'Administer Marker.io settings'
+  description: 'Configure the Marker.io widget settings'
+access markerio:
+  title: 'Access Marker.io widget'
+  description: 'Allows users to report problems via the Marker.io widget.'

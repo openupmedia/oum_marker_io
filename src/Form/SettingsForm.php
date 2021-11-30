@@ -6,7 +6,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Configure OUM Marker.io settings for this site.
+ * Configure Marker.io settings for this site.
  */
 class SettingsForm extends ConfigFormBase {
 
