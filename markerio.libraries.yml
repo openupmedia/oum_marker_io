@@ -1,6 +1,6 @@
 # Custom module library for general purposes.
-oum_marker_io:
+markerio:
   js:
-    js/oum-marker-io.js: {}
+    js/markerio.js: {}
   dependencies:
     - core/drupalSettings

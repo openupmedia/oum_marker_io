@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\oum_marker_io\Form;
+namespace Drupal\markerio\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -14,14 +14,14 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'oum_marker_io_settings';
+    return 'markerio_settings';
   }
 
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['oum_marker_io.settings'];
+    return ['markerio.settings'];
   }
 
   /**
@@ -31,7 +31,7 @@ class SettingsForm extends ConfigFormBase {
     $form['destination'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Marker.io destination key'),
-      '#default_value' => $this->config('oum_marker_io.settings')->get('destination'),
+      '#default_value' => $this->config('markerio.settings')->get('destination'),
     ];
     return parent::buildForm($form, $form_state);
   }
@@ -47,7 +47,7 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->config('oum_marker_io.settings')
+    $this->config('markerio.settings')
       ->set('destination', $form_state->getValue('destination'))
       ->save();
     parent::submitForm($form, $form_state);

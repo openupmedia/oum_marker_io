@@ -1,7 +1,0 @@
-oum_marker_io.settings_form:
-  path: '/admin/config/system/oum-marker-io'
-  defaults:
-    _title: 'OUM Marker.io settings'
-    _form: 'Drupal\oum_marker_io\Form\SettingsForm'
-  requirements:
-    _permission: 'administer oum_marker_io configuration'

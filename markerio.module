@@ -12,12 +12,12 @@
 /**
  * Implements hook_page_attachments().
  */
-function oum_marker_io_page_attachments(&$attachments) {
-  $destination = \Drupal::config('oum_marker_io.settings')->get('destination');
+function markerio_page_attachments(&$attachments) {
+  $destination = \Drupal::config('markerio.settings')->get('destination');
   if (\Drupal::currentUser()->isAuthenticated()
       && \Drupal::currentUser()->hasPermission('access marker io')
       && isset($destination)) {
-    $attachments['#attached']['library'][] = 'oum_marker_io/oum_marker_io';
-    $attachments['#attached']['drupalSettings']['oum_marker_io']['destination'] = $destination;
+    $attachments['#attached']['library'][] = 'markerio/markerio';
+    $attachments['#attached']['drupalSettings']['markerio']['destination'] = $destination;
   }
 }
